@@ -9,9 +9,23 @@ export const getOrders = (id) => {
   }
 }
 
+export const getAllOrders = () => {
+  return async dispatch => {
+    const res = await axios.get(`/orders/`)
+    dispatch(setAllOrders(res.data));
+  }
+}
+
 export const setOrders = (orders) => {
   return {
     type: actiontypes().orders.setOrders,
+    payload: orders
+  }
+}
+
+export const setAllOrders = (orders) => {
+  return {
+    type: actiontypes().orders.setAllOrders,
     payload: orders
   }
 }

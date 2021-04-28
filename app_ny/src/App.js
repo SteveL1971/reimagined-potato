@@ -4,6 +4,7 @@ import { ProtectedRoute } from './routes/ProtectedRoute';
 import Navbar from './components/navigation/Navbar';
 import Home from './views/Home';
 import Orders from './views/Orders';
+import AdminOrders from './views/AdminOrders';
 import Products from './views/Products';
 import SignIn from './views/SignIn';
 import CartView from './views/Cart';
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/products" component={Products} />
           <Route exact path="/orders" component={Orders} />
+          <Route exact path="/adminorders/:id" component={AdminOrders} />
           <Route exact path="/signin" component={SignIn} />
           <Route exact path="/cart" component={CartView} />
           <ProtectedRoute exact path="/create" component={Create} />

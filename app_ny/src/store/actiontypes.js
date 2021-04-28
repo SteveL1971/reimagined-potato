@@ -8,7 +8,9 @@ const actiontypes = () => {
     },
     orders: {
       getOrders: 'GET_ORDERS',
+      getAllOrders: 'GET_ALL_ORDERS',
       setOrders: 'SET_ORDERS',
+      setAllOrders: 'SET_ALL_ORDERS',
       emptyOrders: 'EMPTY_ORDERS'
     },
     auth: {

@@ -2,6 +2,7 @@ import actiontypes from '../actiontypes';
 
 let initState = {
   orders: [],
+  allOrders: [],
 }
 
 const ordersReducer = (state = initState, action) => {
@@ -17,6 +18,11 @@ const ordersReducer = (state = initState, action) => {
       return {
         ...state,
         orders: action.payload
+      }
+    case actiontypes().orders.setAllOrders:
+      return {
+        ...state,
+        allOrders: action.payload
       }
 
     case actiontypes().orders.emptyOrders:
