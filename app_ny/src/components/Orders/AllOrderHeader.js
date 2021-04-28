@@ -16,10 +16,6 @@ const OrderHeader = () => {
     //     console.log(product.series)
     //   }    
 
-
-     
-     
-
     //  uniqueSeries()
   //   {
   //     // we want only the unique Type values
@@ -35,6 +31,10 @@ const OrderHeader = () => {
     const uniqueSeries = () => {
         return onlySeries().filter((value, index, self) => self.indexOf(value) === index);
     }
+
+    // useEffect(() => {
+    //     dispatch(getUserDetails(loggedInUser.id));
+    //   }, [dispatch])
 
     return (
         <div className="textStyle">

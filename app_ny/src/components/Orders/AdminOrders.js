@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import OrdersList from './OrdersList';
-import OrderHeader from './OrderHeader';
+import AdminOrderHeader from './AdminOrderHeader';
 import OrdersEmpty from './OrdersEmpty';
 import { getOrders } from '../../store/actions/ordersActions';
 import { useParams } from 'react-router-dom';
@@ -17,13 +17,11 @@ const Orders = () => {
 
   const orders = useSelector(state => state.ordersReducer.orders);
   const isAuth = useSelector(state => state.auth.isAuthenticated)
-  const loggedInUser = useSelector(state => state.auth.loggedInUser)
 
   return (
       <div id="orderMain" className="list card">
         <div className="box d-flex justify-content-between bg-white my-2 px-2">
-          hmmm
-          <OrderHeader />
+          <AdminOrderHeader />
           { 
             (orders.length===0) ? <OrdersEmpty />
             : isAuth ? orders && orders.map(order => <OrdersList key={order.orderNumber} order={order} />) : <div /> 

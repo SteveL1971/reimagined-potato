@@ -16,7 +16,8 @@ const actiontypes = () => {
     auth: {
       login: 'LOGIN',
       logout: 'LOGOUT',
-      loginToken: 'LOGIN_TOKEN'
+      loginToken: 'LOGIN_TOKEN',
+      setUserDetails: 'SET_USER_DETAILS'
     },
     cart: {
       increment: 'CART_INCREMENT',

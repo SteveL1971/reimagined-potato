@@ -58,6 +58,25 @@ exports.registerUser = (req, res) => {
   })
 }
 
+exports.getUserDetails = (req, res) => {
+  User.findOne({ _id: req.params.id })
+  .then(user => {
+    console.log(user)
+    if(user === null) {
+      return res.status(404).json({
+        statusCode: 404,
+        message: 'Incorrect userId'
+      })
+    } else {
+      return res.status(200).json({
+        statusCode: 200,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        email: user.email,
+      })
+    }
+  })
+},
 
 exports.loginUser = (req, res) => {
   User.findOne({ email: req.body.email })

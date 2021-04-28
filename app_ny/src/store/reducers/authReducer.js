@@ -5,6 +5,11 @@ import jwt_decode from "jwt-decode";
 const initState = {
   isAuthenticated: false,
   token: null,
+  userDetails: {
+    firstName: '',
+    lastName: '',
+    email: '',
+  },
   loggedInUser:{
     id: '',
     firstName: '',
@@ -72,6 +77,13 @@ const authReducer = (state = initState, action) => {
         loggedInUser: clearUser,
         isAuthenticated: false
       }
+
+      case actiontypes().auth.setUserDetails:
+        console.log(action.payload)
+        return {
+          ...state,
+          userDetails: action.payload
+        }
       
     default:
       return state

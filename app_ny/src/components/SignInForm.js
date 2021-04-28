@@ -15,6 +15,7 @@ const SignInForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
+    console.log({email, password})
     dispatch(loginRoot({email, password})) 
     // dispatch(loginToken({email, password})) 
     // dispatch(login())

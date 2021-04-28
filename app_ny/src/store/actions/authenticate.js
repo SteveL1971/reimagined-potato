@@ -6,7 +6,6 @@ import axios from '../../axios';
 export const loginRoot = loginDetails => {
   return async dispatch => {
     const res = await axios.post('/users/login', loginDetails)
-    console.log("res:", res)
     if(res.status === 200) {
       localStorage.setItem('token', res.data.token)
       dispatch(loginToken(res.data.token))
@@ -33,5 +32,19 @@ export const logout = () => {
   return {
     type: actiontypes().auth.logout,
     payload: false
+  }
+}
+
+export const getUserDetails = (id) => {
+  return async dispatch => {
+    const res = await axios.get(`/users/${id}`)
+    dispatch(setUserDetails(res.data));
+  }
+}
+
+export const setUserDetails = (userDetails) => {
+  return {
+    type: actiontypes().auth.setUserDetails,
+    payload: userDetails
   }
 }
