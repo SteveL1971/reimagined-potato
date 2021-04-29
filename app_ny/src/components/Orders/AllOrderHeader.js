@@ -37,7 +37,7 @@ const OrderHeader = () => {
     //   }, [dispatch])
 
     return (
-        <div className="textStyle">
+        <div id="allOrderHeader" className="textStyle">
             <div className="row gradient-custom3 p-2">
                 <h4 className="col-3 headerH4">id:</h4>
                 <p className="col-9 headerP">{ loggedInUser.id }</p>

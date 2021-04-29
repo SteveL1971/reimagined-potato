@@ -18,6 +18,7 @@ const orderSchema = mongodb.Schema({
   date: { type: String, required: true },
   count: { type: Number, required: true },
   totalPrice: { type: Number, required: true },
+  completed: { type: Boolean, required: true },
   cart: [cartSchema]
 
 })

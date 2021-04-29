@@ -23,6 +23,7 @@ const Cart = () => {
       date : formattedDate,
       count :counter,
       totalPrice,
+      completed: false,
       cart : products,
       orderNumber: orders.length + 1, 
     }

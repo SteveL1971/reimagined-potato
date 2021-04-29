@@ -37,6 +37,20 @@ export const setProduct = (product) => {
   }
 }
 
+// export const toggleComplete = (orderDetails) => {
+//   console.log(orderDetails)
+//   axios.patch('/orders/order', orderDetails)
+//   return {
+//     type: actiontypes().orders.toggleComplete,
+//   }
+// }
+
+export const toggleComplete = (orderDetails) => {
+  return async dispatch => {
+    await axios.patch('/orders/order', orderDetails)
+  }
+}
+
 export const addProduct = (title, body) => {
   return () => {
     const product = {

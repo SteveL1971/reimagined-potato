@@ -89,7 +89,16 @@ body, html {
 }
 
 .headerH4 {
-  color: white;
+  color:rgb(99, 94, 94);
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin: auto;
+  text-align: left;
+  line-height: 2;
+}
+
+#allOrderHeader .headerH4 {
+  color:rgb(99, 94, 94);
   font-size: 0.7rem;
   font-weight: 600;
   margin: auto;
@@ -98,7 +107,7 @@ body, html {
 }
 
 .headerP {
-  color: white;
+  color:rgb(99, 94, 94);
   font-size: 0.7rem;
   font-weight: 500;
   margin: auto;
@@ -155,8 +164,8 @@ a {
 }
 
 p {
-  color: black;
-  font-size: 0.8rem;
+  color:rgb(99, 94, 94);
+  font-size: 0.6rem;
   font-weight: 500;
 }
 
@@ -165,7 +174,7 @@ p {
 }
 
 .smallText {
-  color: black;
+  color:rgb(99, 94, 94);
   font-size: 0.5rem;
   font-weight: 400;
 }
@@ -178,7 +187,7 @@ p {
   border-left: 2px solid #30cfd0;
   border-right: 2px solid #30cfd0;
   border-top: 2px solid #30cfd0;
-  color: black;
+  color:rgb(99, 94, 94);
   padding: 0.5rem;
   background-color: #fff;
 }
@@ -190,7 +199,7 @@ p {
   margin-bottom: 0.5rem;
   width: 100%;
   border: 2px solid #30cfd0;
-  color: black;
+  color:rgb(99, 94, 94);
   border-radius: 5px;
   background-color: #fff;
   padding-top: 1rem;
@@ -419,7 +428,7 @@ nav {
 }
 
 .orderP {
-  color: black;
+  color:rgb(99, 94, 94);
   font-size: 0.5rem;
   font-weight: 500;
   margin: auto;
@@ -428,7 +437,7 @@ nav {
 
 }
 .orderH5 {
-  color: black;
+  color:rgb(99, 94, 94);
   font-size: 0.5rem;
   font-weight: 600;
   margin: auto;
@@ -456,7 +465,7 @@ nav {
 }
 
 #orderMain .textStyle {
-  color: black;
+  color:rgb(99, 94, 94);
   background-color: #fff;
   border:0;
   width:100%;
@@ -489,7 +498,7 @@ nav {
 }
 
 .orderHeader {
-  color: black;
+  color:rgb(99, 94, 94);
   background-color: #fff;
   border:0;
   width:100%;
@@ -499,7 +508,7 @@ nav {
 
 #orderRows .div p {
   padding: 0;
-  color: black;
+  color:rgb(99, 94, 94);
   font-size: 1rem;
   font-weight: 500;
 }
@@ -522,8 +531,8 @@ nav {
   line-height: 2;
 }
 
-  .headerP {
-    color: black;
+#order .headerP {
+    color:rgb(99, 94, 94);
     font-size: 0.5rem;
     font-weight: 400;
     margin: auto;
@@ -531,16 +540,17 @@ nav {
     line-height: 1.5;
   }
 
-  .headerH4 {
-    color: black;
+#order .headerH4 {
+    color:rgb(99, 94, 94);
     font-size: 0.5rem;
     font-weight: 600;
     margin: auto;
     text-align: left;
     line-height: 1.5;
-  }
+  } 
+
   .orderP {
-    color: black;
+    color:rgb(99, 94, 94);
     font-size: 0.5rem;
     font-weight: 500;
     margin: auto;
@@ -549,7 +559,7 @@ nav {
   }
   
   .orderH5 {
-    color: black;
+    color:rgb(99, 94, 94);
     font-size: 0.5rem;
     font-weight: 600;
     margin: auto;
@@ -575,5 +585,29 @@ nav {
 
   .orderImgStyle {
     width:90px;
+  }
+
+  #order .headerP {
+    color:rgb(99, 94, 94);
+    font-size: 0.7rem;
+    font-weight: 500;
+    margin: auto;
+    text-align: left;
+    line-height: 1.5;
+  }
+
+#order .headerH4 {
+  color:rgb(99, 94, 94);
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin: auto;
+    text-align: left;
+    line-height: 1.5;
+  } 
+
+  p {
+    color:rgb(99, 94, 94);
+    font-size: 0.8rem;
+    font-weight: 500;
   }
 }

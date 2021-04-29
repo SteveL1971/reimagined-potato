@@ -70,6 +70,7 @@ exports.getUserDetails = (req, res) => {
     } else {
       return res.status(200).json({
         statusCode: 200,
+        id: user._id,
         firstName: user.firstName,
         lastName: user.lastName,
         email: user.email,

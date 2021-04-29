@@ -9,11 +9,11 @@ const OrdersList = ({customer}) => {
           <div className="box d-flex justify-content-between bg-white mb-2 px-2">
             <div className="allOrderHeader">
               <div className="row gradient-custom2 p-1">
-                <h4 className="col-1 headerH4">customer id:</h4>
-                <p className="col-2 headerP"> #{ customer.customerId }</p>
-                <h4 className="col-1 headerH4">Orders:</h4>
+                <h4 className="col-9 headerH4">Customer id: <p>{ customer.customerId }</p></h4>
+                {/* <p className="col-5 headerP"> </p> */}
+                <h4 className="col-2 headerH4">Orders:</h4>
                 <p className="col-1 headerP"> { customer.nrOrders }  </p>
-                <div className="col" />
+                {/* <div className="col" /> */}
               </div>
               {/* { order.cart.map((product, index) => <OrdersRows key={index} product={product} />) }                 */}
             </div>

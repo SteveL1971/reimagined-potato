@@ -11,7 +11,8 @@ const actiontypes = () => {
       getAllOrders: 'GET_ALL_ORDERS',
       setOrders: 'SET_ORDERS',
       setAllOrders: 'SET_ALL_ORDERS',
-      emptyOrders: 'EMPTY_ORDERS'
+      emptyOrders: 'EMPTY_ORDERS',
+      toggleComplete: 'TOGGLE_COMPLETED'
     },
     auth: {
       login: 'LOGIN',

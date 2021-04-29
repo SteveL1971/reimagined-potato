@@ -10,6 +10,7 @@ exports.saveOrder = (req, res) => {
         date:           req.body.date,
         count:          req.body.count,
         totalPrice:     req.body.totalPrice,
+        completed:      req.body.completed,
         cart:           req.body.cart
     })
 
@@ -40,4 +41,25 @@ exports.getCustOrders = (req, res) => {
     Order.find({ customerId: req.params.id})
     .then(data => res.status(200).json(data))
     .catch(err => res.status(500).json(err))
+}
+
+exports.completeOrder = (req, res) => {
+    Order.updateOne({ orderNumber: req.body.orderNumber, customerId: req.body.customerId }, {
+    ...req.body,
+    completed: req.body.completed,
+    })
+    .then(() => {
+    res.status(200).json({
+        statusCode: 200,
+        status: true,
+        message: 'Order completed successfully'
+        })
+    })
+    .catch(() => {
+    res.status(500).json({
+        statusCode: 500,
+        status: false,
+        message: 'Failed to update product'
+        })
+    })
 }

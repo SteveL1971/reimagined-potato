@@ -36,7 +36,6 @@ const authReducer = (state = initState, action) => {
           exp: decoded.exp
         }
       } else {
-        console.log("false")
         authorised=false
         user= {
           id: '',
@@ -79,10 +78,15 @@ const authReducer = (state = initState, action) => {
       }
 
       case actiontypes().auth.setUserDetails:
-        console.log(action.payload)
+        const userDetails = {
+          userId: action.payload.id,
+          firstName: action.payload.firstName,
+          lastName: action.payload.lastName,
+          email: action.payload.email
+        }
         return {
           ...state,
-          userDetails: action.payload
+          userDetails
         }
       
     default:

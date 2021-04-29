@@ -14,11 +14,13 @@ const ordersReducer = (state = initState, action) => {
         ...state,
         orders: action.payload
       }
+
     case actiontypes().orders.setOrders:
       return {
         ...state,
         orders: action.payload
       }
+      
     case actiontypes().orders.setAllOrders:
       return {
         ...state,

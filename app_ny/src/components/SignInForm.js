@@ -26,7 +26,7 @@ const SignInForm = () => {
 
   return (
     <div>
-      <div className="card formStyle">
+      <div className="card formStyle row">
         <div className="gradient-custom mb-3 p-2 d-flex justify-content-center orderH5">Log in</div>
           <div className="card-body px-lg-2 pt-4">
             <form className="textColor" onSubmit={e => handleSubmit(e)}>

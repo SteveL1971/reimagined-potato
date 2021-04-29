@@ -18,11 +18,11 @@ const AdminOrderHeader = () => {
         dispatch(getUserDetails(id));
       }, [dispatch])
 
-    const loggedInUser = useSelector(state => state.auth.loggedInUser)
+    // const loggedInUser = useSelector(state => state.auth.loggedInUser)
     const orders = useSelector(state => state.ordersReducer.orders);
     const userDetails = useSelector(state => state.auth.userDetails);
 
-    console.log(userDetails)
+    // console.log(userDetails)
 
     return (
         <div className="textStyle">

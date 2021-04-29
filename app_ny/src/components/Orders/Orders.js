@@ -8,14 +8,13 @@ import { getOrders } from '../../store/actions/ordersActions';
 const Orders = () => {
 
   const dispatch = useDispatch();
+  const orders = useSelector(state => state.ordersReducer.orders);
+  const isAuth = useSelector(state => state.auth.isAuthenticated)
+  const loggedInUser = useSelector(state => state.auth.loggedInUser)
 
   useEffect(() => {
     dispatch(getOrders(loggedInUser.id));
   }, [dispatch])
-
-  const orders = useSelector(state => state.ordersReducer.orders);
-  const isAuth = useSelector(state => state.auth.isAuthenticated)
-  const loggedInUser = useSelector(state => state.auth.loggedInUser)
 
   return (
       <div id="orderMain" className="list card">

@@ -3,13 +3,24 @@ import axios from '../../axios';
 
 
 
-export const loginRoot = loginDetails => {
+export const loginRoot = ({email, password}) => {
+  // console.log("within loginroot", email, password)
+  // const loginDetails = {email,password}
   return async dispatch => {
-    const res = await axios.post('/users/login', loginDetails)
+    const res = await axios.post('/users/login', {email,password})
     if(res.status === 200) {
       localStorage.setItem('token', res.data.token)
       dispatch(loginToken(res.data.token))
       dispatch(login())
+    } 
+  }
+}
+
+export const signUpRoot = newUser => {
+  return async dispatch => {
+    const res = await axios.post('/users/register', newUser)
+    if(res.status === 201) {
+      dispatch(loginRoot(newUser))
     } 
   }
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
-import Orders from '../components/Orders/Orders';
 import AdminOrders from '../components/Orders/AdminOrders';
 import OrdersNotLoggedIn from '../components/Orders/OrdersNotLoggedIn';
 

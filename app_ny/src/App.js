@@ -7,6 +7,7 @@ import Orders from './views/Orders';
 import AdminOrders from './views/AdminOrders';
 import Products from './views/Products';
 import SignIn from './views/SignIn';
+import SignUp from './views/SignUp';
 import CartView from './views/Cart';
 import ProductDetails from './views/ProductDetails';
 import Create from './views/Create';
@@ -23,6 +24,7 @@ function App() {
           <Route exact path="/orders" component={Orders} />
           <Route exact path="/adminorders/:id" component={AdminOrders} />
           <Route exact path="/signin" component={SignIn} />
+          <Route exact path="/signup" component={SignUp} />
           <Route exact path="/cart" component={CartView} />
           <ProtectedRoute exact path="/create" component={Create} />
           <Route exact path="/product/:id" component={ProductDetails} />
