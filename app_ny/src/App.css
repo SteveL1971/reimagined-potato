@@ -146,6 +146,16 @@ body, html {
   width: 280px;
 }
 
+.btnGreen {
+  background-color: green;
+  color: white !important
+}
+
+.btnRed {
+  background-color: red;
+  color: white !important;
+}
+
 h5, p {
   font-weight: 400;
   font-size: 0.6rem;

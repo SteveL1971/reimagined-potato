@@ -2,6 +2,14 @@ import actiontypes from '../actiontypes';
 // import axios from 'axios';
 import axios from '../../axios';
 
+export const getCompleted = (orderDetails) => {
+  return async dispatch => {
+    await axios.patch('/orders/order', orderDetails)
+    const res = await axios.get(`/orders/${orderDetails.customerId}`)
+    dispatch(setOrders(res.data));
+  }
+}
+
 export const getOrders = (id) => {
   return async dispatch => {
     const res = await axios.get(`/orders/${id}`)
@@ -34,20 +42,6 @@ export const setProduct = (product) => {
   return {
     type: actiontypes().products.setProduct,
     payload: product
-  }
-}
-
-// export const toggleComplete = (orderDetails) => {
-//   console.log(orderDetails)
-//   axios.patch('/orders/order', orderDetails)
-//   return {
-//     type: actiontypes().orders.toggleComplete,
-//   }
-// }
-
-export const toggleComplete = (orderDetails) => {
-  return async dispatch => {
-    await axios.patch('/orders/order', orderDetails)
   }
 }
 
