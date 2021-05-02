@@ -41,7 +41,7 @@ const Navbar = () => {
               </NavLink>
               { isAuth 
                 ? <div className="navLeftText">
-                  <div>Hi { loggedInUser.firstName }!</div>
+                  {/* <div>Hi { loggedInUser.firstName }!</div> */}
                   </div>
                 : <div />
               }

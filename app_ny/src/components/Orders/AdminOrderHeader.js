@@ -53,7 +53,6 @@ const AdminOrderHeader = () => {
         setEdit(!edit)
       }
 
-
     return (
         <div className="textStyle">
             <div className="row gradient-custom3 p-2">
@@ -78,21 +77,19 @@ const AdminOrderHeader = () => {
                             <label htmlFor="cfirstname">First name</label>
                         </div>
                         <div className="mb-2 col-12 orderP">
-                        <input type="text" id="clastname" value={lastName} onChange={e => setLastName(e.target.value)} className="form-control form-control-sm" placeholder={userDetails.lastName} />
-                        <label htmlFor="clastname">Surname</label>
+                            <input type="text" id="clastname" value={lastName} onChange={e => setLastName(e.target.value)} className="form-control form-control-sm" placeholder={userDetails.lastName} />
+                            <label htmlFor="clastname">Surname</label>
+                        </div>
+                    </div>
+                    <div className="mb-2 col-12 orderP">
+                        <input type="email" id="cemail" value={email} onChange={e => setEmail(e.target.value)} className="form-control form-control-sm" placeholder={userDetails.email} />
+                        <label htmlFor="cemail">E-mail</label>
                     </div>
                 </div>
-                <div className="mb-2 col-12 orderP">
-                    <input type="email" id="cemail" value={email} onChange={e => setEmail(e.target.value)} className="form-control form-control-sm" placeholder={userDetails.email} />
-                    <label htmlFor="cemail">E-mail</label>
+                <div className="d-flex justify-content-center">
+                <button className="btn btn-info bg-info py-1 mb-3">Submit changes</button>
                 </div>
-            </div>
-            <div className="d-flex justify-content-center">
-            <button className="btn btn-info bg-info py-1 mb-3">Submit changes</button>
-            </div>
-        </form>
-        
-            
+            </form>
         </div>
     )
 }

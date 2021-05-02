@@ -41,7 +41,7 @@ const Cart = () => {
   const isAuth = useSelector(state => state.auth.isAuthenticated)
 
   return (
-    <div className="maxWidth margin-auto">
+    <div className="margin-auto w-100 pt-3">
       { 
       isAuth?
         <div>

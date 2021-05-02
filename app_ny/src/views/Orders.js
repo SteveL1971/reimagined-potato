@@ -8,7 +8,7 @@ const OrdersView = () => {
   const isAuth = useSelector(state => state.auth.isAuthenticated)
 
   return (
-    <div id="order" className="pt-5 d-flex margin-auto">
+    <div id="order" className="d-flex margin-auto">
       
       {
       isAuth 

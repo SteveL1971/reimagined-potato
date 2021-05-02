@@ -20,7 +20,7 @@ const Orders = () => {
 
   return (
       <div id="orderMain" className="list card maxWidth">
-        <div className="box d-flex justify-content-between bg-white my-2 px-2">
+        <div className="box d-flex justify-content-between bg-white px-2">
           <AdminOrderHeader />
           { 
             (orders.length===0) ? <OrdersEmpty />

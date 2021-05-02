@@ -12,7 +12,7 @@ const OrderHeader = () => {
     //   dispatch(getAllOrders(loggedInUser.id));
     // }, [dispatch])
 
-    const loggedInUser = useSelector(state => state.auth.loggedInUser)
+    // const loggedInUser = useSelector(state => state.auth.loggedInUser)
     const orders = useSelector(state => state.ordersReducer.allOrders);
 
     const onlySeries = () => {

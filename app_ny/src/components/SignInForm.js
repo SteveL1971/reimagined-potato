@@ -15,22 +15,17 @@ const SignInForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log({email, password})
     dispatch(loginRoot({email, password})) 
-    // dispatch(loginToken({email, password})) 
-    // dispatch(login())
-
-    try { history.push(history.location.state.from.pathname) }
-    catch { history.push('/products') }
+    history.push('/products') 
   }
 
   return (
-    <div className="maxWidth d-flex margin-auto">
+    <div id="signIn" className="margin-auto w-100">
       <div className="card formStyle row">
-        <div className="gradient-custom mb-3 p-2 d-flex justify-content-center orderH5">Log in</div>
-          <div className="card-body px-lg-2 pt-4">
+        <div className="gradient-custom mb-3 p-2 d-flex justify-content-center headerH5">Log in</div>
+          <div className="card-body px-3 pt-4">
             <form className="textColor" onSubmit={e => handleSubmit(e)}>
-              <div className="md-form mb-3 orderP">
+              <div className="md-form mb-3 orderH5">
                 <input type="email" id="email" value={email} onChange={e => setEmail(e.target.value)} className="form-control form-control-sm" />
                 <label htmlFor="email">E-mail</label>
               </div>
@@ -39,7 +34,7 @@ const SignInForm = () => {
                 <label htmlFor="password">Password</label>
               </div>
               <div className="px-5">
-                <button className="btn btn-info btn-rounded btn-block w-100" type="submit">Log in</button>
+                <button className="btn btn-info btn-block w-100" type="submit">Log in</button>
               </div>
               <div className="d-flex justify-content-center my-4">
                 <p>Not a member? <Link to="/signup">Sign up</Link></p>

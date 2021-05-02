@@ -17,7 +17,6 @@ import Create from './views/Create';
 function App() {
   return (
     <BrowserRouter >
-      
       <Navbar />
       <div>
         <Switch>
