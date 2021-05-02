@@ -82,11 +82,20 @@ const Navbar = () => {
                         <div></div>
                       }
                       <li>
-                        <NavLink exact to="/orders" className="link dropdown-item" activeClassName="active-link"><img src={ imgCobain} className="imgMini" alt="Cobain"></img>Orders</NavLink>
+                        <NavLink exact to="/orders" className="link dropdown-item" activeClassName="active-link"><img src={ imgCobain} className="imgMini" alt="Cobain"></img>My Orders</NavLink>
                       </li>
+
+                      
                       <li>
                         <NavLink exact to="/products" className="link dropdown-item" activeClassName="active-link"><img src={ imgSauron} className="imgMini" alt="Sauron"></img>Products</NavLink>
                       </li>
+                      { loggedInUser.admin 
+                        ? <div>
+                            <li><hr className="dropdown-divider" /></li>
+                            <li><NavLink exact to="/adminorders" className="link dropdown-item" activeClassName="active-link"><img src={ imgCobain} className="imgMini" alt="Cobain"></img>All Orders</NavLink></li>
+                          </div>
+                        : <div />
+                      }
                       { isAuth 
                         ? <div>
                             <li><hr className="dropdown-divider" /></li>

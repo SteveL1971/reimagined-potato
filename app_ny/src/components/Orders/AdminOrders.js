@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import OrdersList from './OrdersList';
+import AdminOrdersList from './AdminOrdersList';
 import AdminOrderHeader from './AdminOrderHeader';
 import OrdersEmpty from './OrdersEmpty';
 import { getOrders } from '../../store/actions/ordersActions';
@@ -24,7 +24,7 @@ const Orders = () => {
           <AdminOrderHeader />
           { 
             (orders.length===0) ? <OrdersEmpty />
-            : isAuth ? orders && orders.map(order => <OrdersList key={order.orderNumber} order={order} />) : <div /> 
+            : isAuth ? orders && orders.map(order => <AdminOrdersList key={order.orderNumber} order={order} />) : <div /> 
           }
           </div>
       </div>

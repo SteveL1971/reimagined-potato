@@ -74,6 +74,7 @@ exports.getUserDetails = (req, res) => {
         firstName: user.firstName,
         lastName: user.lastName,
         email: user.email,
+        admin: user.admin
       })
     }
   })
@@ -123,4 +124,28 @@ exports.loginUser = (req, res) => {
         })
       }
     })
+}
+
+exports.editUserDetails = (req, res) => {
+  User.updateOne({ _id: req.body.id }, {
+  ...req.body,
+  firstName: req.body.firstName,
+  lastName: req.body.lastName,
+  email: req.body.email
+  })
+
+  .then(() => {
+  res.status(200).json({
+      statusCode: 200,
+      status: true,
+      message: 'User updated successfully'
+      })
+  })
+  .catch(() => {
+  res.status(500).json({
+      statusCode: 500,
+      status: false,
+      message: 'Failed to update user'
+      })
+  })
 }

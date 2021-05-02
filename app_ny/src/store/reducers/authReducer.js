@@ -33,6 +33,7 @@ const authReducer = (state = initState, action) => {
           firstName: decoded.firstName,
           lastName: decoded.lastName,
           email: decoded.email,
+          admin: decoded.admin,
           exp: decoded.exp
         }
       } else {
@@ -42,6 +43,7 @@ const authReducer = (state = initState, action) => {
           firstName: '',
           lastName: '',
           email: '',
+          admin: '',
           exp: '',
         }
       }

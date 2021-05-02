@@ -53,6 +53,13 @@ export const getUserDetails = (id) => {
   }
 }
 
+export const editUserDetails = (userDetails) => {
+  return async dispatch => {
+    await axios.patch(`/users/${userDetails.userId}`, userDetails)
+    dispatch(setUserDetails(userDetails));
+  }
+}
+
 export const setUserDetails = (userDetails) => {
   return {
     type: actiontypes().auth.setUserDetails,
