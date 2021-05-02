@@ -36,10 +36,10 @@ const OrdersList = ({order}) => {
                 <h4 className="col-3 headerH4">Order status:</h4>
                 <p className="col-9 headerP"> { order.completed ? "dispatched":"being processed" }</p>
               </div>
-              <div className="margin-auto w-25">
+              <div className="d-flex justify-content-center">
                 {
                 admin
-                  ? <button id="btnComplete" onClick={e => toggleCompleted()} className={`btn my-2 w-100 ${order.completed ? "btnGreen" : "btnRed"}`}>{order.completed ? "Edit" : "Dispatch"}</button>
+                  ? <button id="btnComplete" onClick={e => toggleCompleted()} className={`btn py-1 my-2 ${order.completed ? "btnGreen" : "btnRed"}`}>{order.completed ? "Change back to unsent" : "Dispatch Order"}</button>
                   : <div />
                 }
               </div>

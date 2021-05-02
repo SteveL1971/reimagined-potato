@@ -14,6 +14,7 @@ const AdminOrderHeader = () => {
     const [email, setEmail] = useState('');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
+    const [edit, setEdit] = useState('false');
 
     useEffect(() => {
       dispatch(getOrders(id));
@@ -26,8 +27,6 @@ const AdminOrderHeader = () => {
     // const loggedInUser = useSelector(state => state.auth.loggedInUser)
     const orders = useSelector(state => state.ordersReducer.orders);
     const userDetails = useSelector(state => state.auth.userDetails);
-
-    // console.log(userDetails)
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -47,7 +46,13 @@ const AdminOrderHeader = () => {
         }
 
         dispatch (editUserDetails(user))
+        toggleEdit()
     }
+
+    const toggleEdit = () => {
+        setEdit(!edit)
+      }
+
 
     return (
         <div className="textStyle">
@@ -60,8 +65,12 @@ const AdminOrderHeader = () => {
                 <p className="col-9 headerP"> { userDetails.email }  </p>
                 <h4 className="col-3 headerH4">Orders:</h4>
                 <p className="col-9 headerP"> { orders.length }  </p>
+                <div className="d-flex justify-content-center">
+                <button className={`${edit ? "row": "hideForm"} btn btn-info bg-info mt-3 mb-2 py-1`} onClick={toggleEdit}>Edit details</button>
+                </div>
             </div>
-            <form className="card formStyle row" onSubmit={e => handleSubmit(e)}>
+            
+            <form className={`${!edit ? "row": "hideForm"} card formStyle`} onSubmit={e => handleSubmit(e)}>
                 <div className="col p-2 mt-3">
                     <div className="row">
                         <div className="mb-2 col-12 orderP">
@@ -78,9 +87,11 @@ const AdminOrderHeader = () => {
                     <label htmlFor="cemail">E-mail</label>
                 </div>
             </div>
-            <button className="btn btn-secondary w-25">Submit changes</button>
+            <div className="d-flex justify-content-center">
+            <button className="btn btn-info bg-info py-1 mb-3">Submit changes</button>
+            </div>
         </form>
-        <button className="btn btn-secondary">Edit details</button>
+        
             
         </div>
     )

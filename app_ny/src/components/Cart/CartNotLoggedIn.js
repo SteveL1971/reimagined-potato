@@ -4,7 +4,7 @@ import gogo from '../../assets/img/gogo.jpg'
 
 const CartNotLoggedIn = () => {
     return (
-        <div v-if="!loggedIn">
+        <div className="margin-auto">
             <div className="container style404">
                 <h1>Please log in!</h1>
                 <div className="links d-flex justify-content-center my-2">

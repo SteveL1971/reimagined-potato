@@ -8,7 +8,7 @@ const Home = () => {
     const isAuth = useSelector(state => state.auth.isAuthenticated)
 
     return (
-    <div className="contain">
+    <div className="contain maxWidth d-flex margin-auto">
         <div className="container style404 w-75">
             <h2 className="text-center">Welcome to Funko store</h2>
             <div className="links d-flex justify-content-center my-2">

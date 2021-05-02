@@ -29,7 +29,7 @@ const SignUpForm = () => {
   }
 
   return (
-    <div>
+    <div className="maxWidth d-flex margin-auto">
       <form className="card formStyle row" onSubmit={e => handleSubmit(e)}>
         <div className="gradient-custom mb-3 p-2 d-flex justify-content-center orderH5">Sign up as a new customer</div>
           <div className="col p-2 mt-3">

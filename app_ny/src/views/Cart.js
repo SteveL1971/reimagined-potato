@@ -10,7 +10,7 @@ const CartView = () => {
   const counter = useSelector(state => state.cartReducer.cartCounter)
 
   return (
-    <div className="pt-5">
+    <div className="pt-5 d-flex margin-auto">
       {
       isAuth 
         ? (counter>0)

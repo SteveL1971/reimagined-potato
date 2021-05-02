@@ -179,6 +179,14 @@ p {
   font-weight: 500;
 }
 
+.hideForm {
+  display:none
+}
+
+.maxWidth {
+  max-width: 1024px;
+}
+
 .margin-auto{
   margin:auto;
 }

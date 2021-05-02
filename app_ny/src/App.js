@@ -11,11 +11,12 @@ import SignIn from './views/SignIn';
 import SignUp from './views/SignUp';
 import CartView from './views/Cart';
 import ProductDetails from './views/ProductDetails';
+import OrderComplete from './views/OrderComplete';
 import Create from './views/Create';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter >
       
       <Navbar />
       <div>
@@ -28,6 +29,7 @@ function App() {
           <Route exact path="/signin" component={SignIn} />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/cart" component={CartView} />
+          <Route exact path="/ordercomplete" component={OrderComplete} />
           <ProtectedRoute exact path="/create" component={Create} />
           <Route exact path="/product/:id" component={ProductDetails} />
         </Switch>

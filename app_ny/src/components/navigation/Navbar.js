@@ -32,7 +32,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="">
+    <nav className="maxWidth d-flex margin-auto">
 
       <div className="gradient-custom3">
             <div className="navLeft">
@@ -92,7 +92,7 @@ const Navbar = () => {
                       { loggedInUser.admin 
                         ? <div>
                             <li><hr className="dropdown-divider" /></li>
-                            <li><NavLink exact to="/adminorders" className="link dropdown-item" activeClassName="active-link"><img src={ imgCobain} className="imgMini" alt="Cobain"></img>All Orders</NavLink></li>
+                            <li><NavLink exact to="/adminorders" className="link dropdown-item" activeClassName="active-link"><img src={ imgCobain} className="imgMini" alt="Cobain"></img>Admin</NavLink></li>
                           </div>
                         : <div />
                       }
