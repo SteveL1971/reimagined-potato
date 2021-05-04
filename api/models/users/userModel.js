@@ -3,6 +3,12 @@ const User = require('../users/userSchema');
 const bcrypt = require('bcrypt');
 const auth = require('../../authentication/auth');
 
+exports.getUsers = (req, res) => {
+  User.find()
+  .then(data => res.status(200).json(data))
+  .catch(err => res.status(500).json(err))
+}
+
 exports.registerUser = (req, res) => {
 
   User.exists({ email: req.body.email }, (err, result) => {
@@ -147,5 +153,39 @@ exports.editUserDetails = (req, res) => {
       status: false,
       message: 'Failed to update user'
       })
+  })
+}
+
+exports.deleteUser = (req, res) => {
+  User.exists({ _id: req.params.id }, (err, result) => {
+    if(err) {
+      return res.status(400).json(err)
+    } 
+    else {
+      if(result){
+        User.deleteOne({ _id: req.params.id })
+          .then(() => {
+            res.status(200).json({
+              statusCode: 200,
+              status: true,
+              message: 'Product deleted'
+            })
+          })
+          .catch(() => {
+            res.status(500).json({
+              statusCode: 500,
+              status: false,
+              message: 'Failed to delete product'
+            })
+          })
+      }
+      else {
+        return res.status(404).json({
+          statusCode: 404,
+          status: false,
+          message: 'Ooops this product does not exist'
+        })
+      }
+    }
   })
 }

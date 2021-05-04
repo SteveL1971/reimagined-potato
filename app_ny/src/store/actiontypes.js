@@ -29,6 +29,10 @@ const actiontypes = () => {
       remCartRow: 'REM_CART_ROW',
       sendOrder: 'SEND_ORDER',
       emptyCart: 'EMPTY_CART'
+    },
+    users: {
+      getUsers: 'GET_USERS',
+      setUsers: 'SET_USERS',
     }
   }
 }

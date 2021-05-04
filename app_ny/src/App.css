@@ -95,6 +95,15 @@ body, html {
   font-weight: 600;
 }
 
+.testing{
+  text-align: left;
+  display: block;
+}
+.btnDelete{
+  justify-content:space-between;
+  align-items: center;
+}
+
 .headerH4 {
   color:rgb(99, 94, 94);
   font-size: 0.7rem;

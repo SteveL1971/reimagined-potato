@@ -1,8 +1,6 @@
 import actiontypes from '../actiontypes';
 import axios from '../../axios';
 
-
-
 export const loginRoot = ({email, password}) => {
   // console.log("within loginroot", email, password)
   // const loginDetails = {email,password}
