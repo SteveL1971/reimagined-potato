@@ -7,6 +7,7 @@ import Orders from './views/Orders';
 import AdminOrders from './components/Orders/AdminOrders';
 import AdminAllOrders from './views/AdminOrders';
 import AdminUsers from './views/AdminUsers';
+import DeletedUser from './views/DeletedUser';
 import Products from './views/Products';
 import SignIn from './views/SignIn';
 import SignUp from './views/SignUp';
@@ -27,6 +28,7 @@ function App() {
           <Route exact path="/adminorders/:id" component={AdminOrders} />
           <Route exact path="/adminorders/" component={AdminAllOrders} />
           <Route exact path="/adminusers/" component={AdminUsers} />
+          <Route exact path="/deleteduser/" component={DeletedUser} />
           <Route exact path="/signin" component={SignIn} />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/cart" component={CartView} />

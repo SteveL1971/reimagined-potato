@@ -8,6 +8,7 @@ export const getUsers = () => {
   }
 }
 
+
 export const setUsers = (users) => {
   return {
     type: actiontypes().users.setUsers,
@@ -22,9 +23,31 @@ export const setUsers = (users) => {
 //   }
 // }
 
-export const deleteUser = (id) => {
-  axios.delete(`/users/delete/${id}`)
-  return async dispatch => {
-    dispatch(getUsers);
+// export const deleteUser = (id) => {
+//   axios.delete(`/users/delete/${id}`)
+//   return async dispatch => {
+//     dispatch(getUsers);
+//   }
+// }
+
+// export const deleteUser = async (id) => {
+
+//   await axios.delete(`/users/delete/${id}`)
+//   const res = await axios.get(`/users/`)
+//   console.log("burp: ", res.data)
+
+//   return async dispatch => {
+//     axios.get(`/users/`).then((res) => {
+//       dispatch(setUsers(res.data))
+//     })
+//   }
+// }
+
+export const deleteUser = async (id) => {
+  await axios.delete(`/users/delete/${id}`)
+  const res = await axios.get(`/users/`)
+  console.log(res.data)
+  return dispatch => {
+    dispatch(setUsers(res.data));
   }
 }

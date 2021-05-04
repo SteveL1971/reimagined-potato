@@ -13,7 +13,7 @@ const AllUsers = () => {
   useEffect(() => {
     dispatch(getAllOrders());
   }, [dispatch])
-  
+
   useEffect(() => {
     dispatch(getUsers());
   }, [dispatch])
@@ -57,8 +57,6 @@ const AllUsers = () => {
       }
     ))
   }
-
-  console.log ("complete", completeUsers())
   
   return (
       <div id="orderMain" className="list card maxWidth">
