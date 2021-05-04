@@ -32,6 +32,16 @@ const AllUsers = () => {
     return counting;
   }
 
+  const UnsentOrders = (id) => {
+    let counting=0
+    orders.forEach(element => {
+      if (element.customerId===id && !element.completed){
+      counting++
+      }
+    });
+    return counting;
+  }
+
   const onlySeries = () => {
     return users.map(user => user._id);
   }
@@ -40,23 +50,26 @@ const AllUsers = () => {
       return onlySeries().filter((value, index, self) => self.indexOf(value) === index);
   }
   
-  const customers = () => {
-    return uniqueSeries().map(order => (
-      {
-      customerId: order,
-      nrOrders: NrOrders(order)
-      }
-    ));
-  }
+  // const customers = () => {
+  //   return uniqueSeries().map(order => (
+  //     {
+  //     customerId: order,
+  //     nrOrders: NrOrders(order)
+  //     }
+  //   ));
+  // }
 
   const completeUsers = () => {
     return users.map(user => (
       {
         ...user,
-        nrOrders: NrOrders(user._id)
+        nrOrders: NrOrders(user._id),
+        unsent: UnsentOrders(user._id)
       }
     ))
   }
+
+  // console.log(completeUsers())
   
   return (
       <div id="orderMain" className="list card maxWidth">

@@ -56,14 +56,14 @@ const AdminOrderHeader = () => {
     return (
         <div className="textStyle">
             <div className="row gradient-custom3 p-2">
-                <h4 className="col-3 headerH4">id:</h4>
-                <p className="col-9 headerP"> { id } </p>
-                <h4 className="col-3 headerH4">Name:</h4>
-                <p className="col-9 headerP"> { userDetails.firstName } { userDetails.lastName }  </p>
-                <h4 className="col-3 headerH4">Email:</h4>
-                <p className="col-9 headerP"> { userDetails.email }  </p>
-                <h4 className="col-3 headerH4">Orders:</h4>
-                <p className="col-9 headerP"> { orders.length }  </p>
+                <h4 className="col-3 orderH4">id:</h4>
+                <p className="col-9 orderP"> { id } </p>
+                <h4 className="col-3 orderH4">Name:</h4>
+                <p className="col-9 orderP"> { userDetails.firstName } { userDetails.lastName }  </p>
+                <h4 className="col-3 orderH4">Email:</h4>
+                <p className="col-9 orderP"> { userDetails.email }  </p>
+                <h4 className="col-3 orderH4">Orders:</h4>
+                <p className="col-9 orderP"> { orders.length }  </p>
                 <div className="d-flex justify-content-center">
                 <button className={`${edit ? "row": "hideForm"} btn btn-info bg-info mt-3 mb-2 py-1`} onClick={toggleEdit}>Edit details</button>
                 </div>

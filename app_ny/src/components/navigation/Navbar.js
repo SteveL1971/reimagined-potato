@@ -89,15 +89,16 @@ const Navbar = () => {
                       <li>
                         <NavLink exact to="/products" className="link dropdown-item" activeClassName="active-link"><img src={ imgSauron} className="imgMini" alt="Sauron"></img>Products</NavLink>
                       </li>
-                      { loggedInUser.admin 
+                      {/* { loggedInUser.admin 
                         ? <div>
                             <li><hr className="dropdown-divider" /></li>
                             <li><NavLink exact to="/adminorders" className="link dropdown-item" activeClassName="active-link"><img src={ imgCobain} className="imgMini" alt="Cobain"></img>Admin orders</NavLink></li>
                           </div>
                         : <div />
-                      }
+                      } */}
                       { loggedInUser.admin 
                         ? <div>
+                          <li><hr className="dropdown-divider" /></li>
                             <li><NavLink exact to="/adminusers" className="link dropdown-item" activeClassName="active-link"><img src={ imgCobain} className="imgMini" alt="Cobain"></img>Admin users</NavLink></li>
                           </div>
                         : <div />

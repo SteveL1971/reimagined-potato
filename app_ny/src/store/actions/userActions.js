@@ -46,7 +46,6 @@ export const setUsers = (users) => {
 export const deleteUser = async (id) => {
   await axios.delete(`/users/delete/${id}`)
   const res = await axios.get(`/users/`)
-  console.log(res.data)
   return dispatch => {
     dispatch(setUsers(res.data));
   }

@@ -95,9 +95,34 @@ body, html {
   font-weight: 600;
 }
 
+.testing0{
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0.1rem;
+  /* width: 60%; */
+}
+
 .testing{
   text-align: left;
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  /* width: 100%; */
+  /* justify-content: space-around; */
+  align-items: center;
+}
+
+.tcol1{
+  width: 100%;
+  flex:2;
+}
+
+.tcol2{
+  flex: 4;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 .btnDelete{
   justify-content:space-between;
@@ -105,12 +130,17 @@ body, html {
 }
 
 .headerH4 {
-  color:rgb(99, 94, 94);
+  /* color:rgb(99, 94, 94); */
+  color:white;
   font-size: 0.7rem;
   font-weight: 600;
   margin: auto;
   text-align: left;
   line-height: 2;
+}
+
+.red-text {
+  color:red;
 }
 
 #allOrderHeader .headerH4 {
@@ -123,7 +153,8 @@ body, html {
 }
 
 .headerP {
-  color:rgb(99, 94, 94);
+  /* color:rgb(99, 94, 94); */
+  color:white;
   font-size: 0.7rem;
   font-weight: 500;
   margin: auto;
@@ -478,6 +509,14 @@ nav {
   text-align: left;
   line-height: 1.7;
 }
+.orderH4 {
+  color:rgb(99, 94, 94);
+  font-size: 0.6rem;
+  font-weight: 700;
+  margin: auto;
+  text-align: left;
+  line-height: 1.7;
+}
 
 .links{
   flex-direction: column;
@@ -505,7 +544,7 @@ nav {
   width:100%;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
-  border: 2px solid rgba(0, 0, 0, 0.26);
+  /* border: 2px solid rgba(0, 0, 0, 0.26); */
   border-radius: 5px;
 }
 

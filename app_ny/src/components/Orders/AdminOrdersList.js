@@ -25,16 +25,16 @@ const OrdersList = ({order}) => {
           <div className="orderHeader">
             <div className=" justify-content-between align-items-center">
               <div className="row gradient-custom2 p-2">
-                <h4 className="col-3 headerH4">Order:</h4>
-                <p className="col-9 headerP"> #{ order.orderNumber }  </p>
-                <h4 className="col-3 headerH4">Date:</h4>
-                <p className="col-9 headerP"> { order.date }  </p>
-                <h4 className="col-3 headerH4">Items:</h4>
-                <p className="col-9 headerP"> { order.count }  </p>
-                <h4 className="col-3 headerH4">Order value:</h4>
-                <p className="col-9 headerP"> { order.totalPrice }kr incl. VAT </p>
-                <h4 className="col-3 headerH4">Order status:</h4>
-                <p className="col-9 headerP"> { order.completed ? "dispatched":"being processed" }</p>
+                <h4 className="col-3 orderH4">Order:</h4>
+                <p className="col-9 orderP"> #{ order.orderNumber }  </p>
+                <h4 className="col-3 orderH4">Date:</h4>
+                <p className="col-9 orderP"> { order.date }  </p>
+                <h4 className="col-3 orderH4">Items:</h4>
+                <p className="col-9 orderP"> { order.count }  </p>
+                <h4 className="col-3 orderH4">Order value:</h4>
+                <p className="col-9 orderP"> { order.totalPrice }kr incl. VAT </p>
+                <h4 className="col-3 orderH4">Order status:</h4>
+                <p className="col-9 orderP"> { order.completed ? "dispatched":"being processed" }</p>
               </div>
               <div className="d-flex justify-content-center">
                 {
