@@ -509,6 +509,11 @@ nav {
   text-align: left;
   line-height: 1.7;
 }
+
+.deleteBtn {
+  width: 4rem;
+}
+
 .orderH4 {
   color:rgb(99, 94, 94);
   font-size: 0.6rem;

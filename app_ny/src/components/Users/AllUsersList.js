@@ -22,7 +22,7 @@ const AllUsersList = ({user}) => {
                 <div className="testing">
                   {
                     user.admin
-                    ? <h4 className="tcol1 px-1 orderH4">Admin: </h4>
+                    ? <h4 className="tcol1 px-1 orderH4">Admin id: </h4>
                     : <h4 className="tcol1 px-1 orderH4">Customer id: </h4>
                   }
                   <p className="tcol2">{ user._id }</p>
@@ -41,7 +41,7 @@ const AllUsersList = ({user}) => {
                 </div>
               </div>
             </Link>
-            <div className="px-2">
+            <div className="deleteBtn px-2">
               {
                 user.admin
                   ? <div />
