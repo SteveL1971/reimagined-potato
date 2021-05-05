@@ -24,8 +24,8 @@ const AllUsers = () => {
 
   const NrOrders = (id) => {
     let counting=0
-    orders.forEach(element => {
-      if (element.customerId===id){
+    orders.forEach(order => {
+      if (order.customerId===id){
       counting++
       }
     });
@@ -34,21 +34,21 @@ const AllUsers = () => {
 
   const UnsentOrders = (id) => {
     let counting=0
-    orders.forEach(element => {
-      if (element.customerId===id && !element.completed){
+    orders.forEach(order => {
+      if (order.customerId===id && !order.completed){
       counting++
       }
     });
     return counting;
   }
 
-  const onlySeries = () => {
-    return users.map(user => user._id);
-  }
+  // const onlySeries = () => {
+  //   return users.map(user => user._id);
+  // }
 
-  const uniqueSeries = () => {
-      return onlySeries().filter((value, index, self) => self.indexOf(value) === index);
-  }
+  // const uniqueSeries = () => {
+  //     return onlySeries().filter((value, index, self) => self.indexOf(value) === index);
+  // }
   
   // const customers = () => {
   //   return uniqueSeries().map(order => (

@@ -17,7 +17,7 @@ const OrdersList = ({order}) => {
                 <h4 className="col-3 headerH4">Order value:</h4>
                 <p className="col-9 headerP"> { order.totalPrice }kr incl. VAT </p>
                 <h4 className="col-3 headerH4">Order status:</h4>
-                <p className="col-9 headerP"> { order.completed ? "dispatched":"being processed" }</p>
+                <p className={`col-9 ${order.completed?"dsptchYes":"dsptchNo"}`}> { order.completed ? "dispatched":"being processed" }</p>
               </div>
             </div>
             { order.cart.map((product, index) => <OrdersRows key={index} product={product} />) }                

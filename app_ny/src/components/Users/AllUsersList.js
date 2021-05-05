@@ -1,20 +1,16 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { deleteUser, getUsers } from '../../store/actions/userActions';
 
 const AllUsersList = ({user}) => {
 
-  const history= useHistory()
   const dispatch = useDispatch();
 
   const handleDeleteUser = () => {
-    // deleteUser(user._id)
     deleteUser(user._id).then (() => {
       dispatch(getUsers())
     })
-    
-    // history.push('/deleteduser')
   }
 
   return (

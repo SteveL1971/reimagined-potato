@@ -142,6 +142,9 @@ body, html {
 .red-text {
   color:red;
 }
+.green-text {
+  color: green;
+}
 
 #allOrderHeader .headerH4 {
   color:rgb(99, 94, 94);
@@ -153,8 +156,24 @@ body, html {
 }
 
 .headerP {
-  /* color:rgb(99, 94, 94); */
   color:white;
+  font-size: 0.7rem;
+  font-weight: 500;
+  margin: auto;
+  text-align: left;
+  line-height: 2;
+}
+
+.dsptchYes {
+  color:green;
+  font-size: 0.7rem;
+  font-weight: 500;
+  margin: auto;
+  text-align: left;
+  line-height: 2;
+}
+.dsptchNo {
+  color:red;
   font-size: 0.7rem;
   font-weight: 500;
   margin: auto;

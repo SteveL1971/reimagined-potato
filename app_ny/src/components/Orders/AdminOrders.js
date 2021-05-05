@@ -23,16 +23,14 @@ const Orders = () => {
       <div id="orderMain" className="list card maxWidth">
         <div className="box d-flex justify-content-between bg-white px-2">
           
-          { 
-            (orders.length===0)
-              ? <OrdersEmpty />
-              : isAuth 
-                ? <div>
-                    <AdminOrderHeader/>
-                    { orders && orders.map(order => <AdminOrdersList key={order.orderNumber} order={order} />) }
-                  </div>
-                : history.push('/')
-          }
+          {
+            isAuth 
+              ? <div>
+                  <AdminOrderHeader/>
+                  { orders && orders.map(order => <AdminOrdersList key={order.orderNumber} order={order} />) }
+                </div>
+              : history.push('/')
+           }
           </div>
       </div>
   )
