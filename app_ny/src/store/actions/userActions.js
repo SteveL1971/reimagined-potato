@@ -2,14 +2,25 @@ import actiontypes from '../actiontypes';
 import axios from '../../axios';
 
 export const getUsers = () => {
+  // const res = await axios.get(`/users/`)
   return async dispatch => {
     const res = await axios.get(`/users/`)
+    console.log("get", res.data)
     dispatch(setUsers(res.data));
   }
 }
 
+// export const getUsers = () => {
+//   return async dispatch => {
+//     const res = await axios.get(`/users/`)
+//     console.log("get", res.data)
+//     dispatch(setUsers(res.data));
+//   }
+// }
+
 
 export const setUsers = (users) => {
+  console.log("set", users)
   return {
     type: actiontypes().users.setUsers,
     payload: users
@@ -43,10 +54,24 @@ export const setUsers = (users) => {
 //   }
 // }
 
+// export const deleteUser = async (id) => {
+//   await axios.delete(`/users/delete/${id}`)
+//   await axios.get(`/users/`).then(res => {
+//     console.log(res.data)
+//     return {
+//       type: actiontypes().users.setUsers,
+//       payload: res.data
+//     }
+//   })
+// }
+
 export const deleteUser = async (id) => {
   await axios.delete(`/users/delete/${id}`)
-  const res = await axios.get(`/users/`)
-  return dispatch => {
-    dispatch(setUsers(res.data));
-  }
+  // const res = await axios.get(`/users/`)
+  // return async dispatch => {
+  //   const res = await axios.get(`/users/`)
+  //   console.log("get", res.data)
+  //   dispatch(setUsers(res.data));
+  // }
+  return
 }
