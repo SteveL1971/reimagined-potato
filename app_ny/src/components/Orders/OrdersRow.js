@@ -28,11 +28,11 @@ const OrdersRows = ({product}) => {
           <div className="row">
             <div className="row">
               <h5 className="col-4 orderH5">Price each:</h5>
-              <p className="col-8 orderP"> { Math.round(product.price*1.2)}kr incl. VAT</p>
+              <p className="col-8 orderP"> { Math.round(product.price*1.25)}kr incl. VAT</p>
             </div>
             <div className="row">
               <h5 className="col-4 orderH5">Total price:</h5>
-              <p className="col-8 orderP">{ (Math.round(product.price*1.2))*product.amount }kr incl. VAT</p>
+              <p className="col-8 orderP">{ (Math.round(product.price*1.25))*product.amount }kr incl. VAT</p>
             </div>
           </div>
         </div>
