@@ -17,7 +17,6 @@ const AllUsersList = ({user}) => {
     <div id="allOrderList">
       <div className="box d-flex justify-content-between bg-white mb-2 px-2">
         <div className="allOrderHeader">
-          {/* <div className="gradient-custom2 d-flex w-100 p-1 btnDelete"> */}
           <div className={` ${(user.admin)? "gradient-custom":"gradient-custom2"} d-flex w-100 p-1 btnDelete`}>
             <Link className="w-100" to={`/adminorders/${user._id}`}>
               <div className="d-flex testing0">

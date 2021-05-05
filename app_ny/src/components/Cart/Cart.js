@@ -12,6 +12,13 @@ const Cart = () => {
   const dispatch = useDispatch();
   const history = useHistory();
 
+  const orders = useSelector(state => state.ordersReducer.orders);
+  const products = useSelector(state => state.cartReducer.cartProducts);
+  const counter = useSelector(state => state.cartReducer.cartCounter)
+  const totalPrice = useSelector(state => state.cartReducer.totalPrice)
+  const loggedInUser = useSelector(state => state.auth.loggedInUser)
+  const isAuth = useSelector(state => state.auth.isAuthenticated)
+
   useEffect(() => {
     dispatch(getOrders(loggedInUser.id));
   }, [dispatch])
@@ -33,12 +40,7 @@ const Cart = () => {
 
   }
 
-  const orders = useSelector(state => state.ordersReducer.orders);
-  const products = useSelector(state => state.cartReducer.cartProducts);
-  const counter = useSelector(state => state.cartReducer.cartCounter)
-  const totalPrice = useSelector(state => state.cartReducer.totalPrice)
-  const loggedInUser = useSelector(state => state.auth.loggedInUser)
-  const isAuth = useSelector(state => state.auth.isAuthenticated)
+
 
   return (
     <div className="margin-auto w-100 pt-3">
