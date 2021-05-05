@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import AdminOrdersList from './AdminOrdersList';
 import AdminOrderHeader from './AdminOrderHeader';
-import OrdersEmpty from './OrdersEmpty';
 import { getOrders } from '../../store/actions/ordersActions';
 import { useParams, useHistory } from 'react-router-dom';
 
